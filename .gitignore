@@ -6,6 +6,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *DS_Store
+/myenv/
 
 # C extensions
 *.so

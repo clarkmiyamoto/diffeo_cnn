@@ -1,0 +1,10 @@
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+opencv-python
+pillow
+scikit-learn
+pytorch==2.3.0
+torchvision==0.17.2

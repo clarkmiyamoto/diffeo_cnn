@@ -1,0 +1,14 @@
+name: diffeo_cnn_clark
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - jax=0.4.23
+  - scipy
+  - pandas
+  - scikit-learn
+  - pillow=10.3.0
+  - pytorch=2.3.0
+  - opencv=4.9.0
+

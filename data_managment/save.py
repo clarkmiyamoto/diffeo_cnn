@@ -10,7 +10,8 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 # Get caller script's name, without extension
 caller_script_name = os.path.basename(caller_script_path).split('.')[0]
 
-def save_diffeo(name: str, 
+def save_diffeo(name: str,
+                arr,
                 allow_pickle: bool = True):
     diffeo_path = "../data/diffeo/"
     caller_dir_name = _pwd()
@@ -19,9 +20,10 @@ def save_diffeo(name: str,
                         diffeo_path, 
                         caller_dir_name, 
                         caller_script_name)
-    jnp.save(os.path.join(path, name), allow_pickle=allow_pickle)
+    jnp.save(os.path.join(path, name), arr=arr, allow_pickle=allow_pickle)
 
-def save_activation(name:str,
+def save_activation(name: str,
+                    arr,
                     allow_pickle: bool = True):
     activation_path = "../data/activation/"
     caller_dir_name = _pwd()
@@ -30,7 +32,7 @@ def save_activation(name:str,
                         activation_path, 
                         caller_dir_name, 
                         caller_script_name)
-    np.save(os.path.join(path, name), allow_pickle=allow_pickle)
+    np.save(os.path.join(path, name), arr=arr, allow_pickle=allow_pickle)
 
 def _pwd() -> 'os':
     """

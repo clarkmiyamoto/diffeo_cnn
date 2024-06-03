@@ -15,7 +15,7 @@ def load_diffeo(name: str,
     data = jnp.save(os.path.join(path, name), allow_pickle=allow_pickle)
     return data
 
-def save_activation(name:str,
+def load_activation(name:str,
                     allow_pickle: bool = True):
     activation_path = "../data/activation/"
     path = os.path.join(script_dir, 

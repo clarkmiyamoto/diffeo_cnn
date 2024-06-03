@@ -1,5 +1,7 @@
 name: diffeo_cnn_clark
 channels:
+  - pytorch
+  - nvidia
   - defaults
 dependencies:
   - python=3.9
@@ -9,6 +11,8 @@ dependencies:
   - pandas
   - scikit-learn
   - pillow=10.3.0
-  - pytorch=2.3.0
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.1
   - opencv=4.9.0
 

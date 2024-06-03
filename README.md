@@ -1,21 +1,38 @@
 # diffeo_cnn
 
 # Installation
-
-HPC Environment
+Turn on HPC Environment
 ```
 module purge
 module load python/intel/3.8.6 
 ```
 
-Activate python environment
+Create Python environment
 ```
-source diffeo_cnn_clark/bin/activate
+cd <THIS REPO>
+python -m venv myenv
 ```
 
-Pip install
+Activate Python enviroment
 ```
+cd <THIS REPO>
+source myenv/bin/activate
+```
+
+Pip install (could take up to 5 min)
+```
+source myenv/bin/activate
 pip install -r requirements.txt
+```
+
+# Load Environment
+Assumes environment is already created
+```
+cd <THIS REPO>
+
+module purge
+module load python/intel/3.8.6 
+source myenv/bin/activate
 ```
 
 # SBATCH Example
@@ -23,5 +40,5 @@ pip install -r requirements.txt
 ```
 module purge;
 module load python/intel/3.8.6;
-source diffeo_cnn_clark/bin/activate;
+source myenv/bin/activate
 ```

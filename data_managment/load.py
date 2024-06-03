@@ -4,7 +4,6 @@ import inspect
 import jax.numpy as jnp
 import numpy as np
 
-
 # Get directory of load.py
 script_dir = os.path.dirname(os.path.abspath(__file__))
 

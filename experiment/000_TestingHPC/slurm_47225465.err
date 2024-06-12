@@ -1,0 +1,5 @@
+/opt/slurm/data/slurmd/job47225465/slurm_script: line 17: /scratch/cm6627/diff_cnn/myenv/bin/activate: No such file or directory
+Traceback (most recent call last):
+  File "./hello_world.py", line 9, in <module>
+    from .data_managment.directory import pwd
+ImportError: attempted relative import with no known parent package

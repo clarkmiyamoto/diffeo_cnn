@@ -3,7 +3,7 @@ import sys
 
 # Get current file directory & add `diffeo_CNN` to global path
 current_dir = os.path.dirname(os.path.abspath(__file__))
-diffeo_cnn_path = os.path.abspath(os.path.join(current_dir, '../../..'))
+diffeo_cnn_path = os.path.abspath(os.path.join(current_dir, '../..'))
 sys.path.append(diffeo_cnn_path)
 
 from data_managment.directory import pwd

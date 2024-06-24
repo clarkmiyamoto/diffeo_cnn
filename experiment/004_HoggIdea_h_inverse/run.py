@@ -144,10 +144,10 @@ if __name__ == "__main__":
     
     # Parameters for simulation
     target_pic = f"{args.picture:04}"
-    number = f"{args.layer:02}"
+    layer_idx = f"{args.layer:02}"
     num_workers = args.num_cores
-    data_inv = LOAD_gInv_N_g_I(target_pic, number) # Load g^-1 N(g * I)
-    ref_data = LOAD_N_I(target_pic, number)        # Load N(I)
+    data_inv = LOAD_gInv_N_g_I(target_pic, layer_idx) # Load g^-1 N(g * I)
+    ref_data = LOAD_N_I(target_pic, layer_idx)        # Load N(I)
 
     if len(data_inv.shape) != 5:
         raise ValueError('data_inv has wrong shape')

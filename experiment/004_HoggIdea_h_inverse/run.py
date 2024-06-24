@@ -153,5 +153,5 @@ if __name__ == "__main__":
         raise ValueError('data_inv has wrong shape')
 
     ### Run Simulation
-    diffeo_idxs =  int(data_inv.shape[1])  # Replace num_diffeo_idxs with your actual number
+    diffeo_idxs =  range(int(data_inv.shape[1]))  # Replace num_diffeo_idxs with your actual number
     parallel_run_simulation(layer_idx, diffeo_idxs, target_pic)

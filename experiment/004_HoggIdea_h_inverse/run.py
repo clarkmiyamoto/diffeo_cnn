@@ -1,9 +1,6 @@
 import argparse
 
 import numpy as np
-import jax
-import jax.numpy as jnp
-from jax import grad, jit
 import torch
 import torch.optim as optim
 

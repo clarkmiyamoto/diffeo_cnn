@@ -121,7 +121,7 @@ if __name__ == "__main__":
     
     # Parameters for simulation
     target_pic = args.picture
-    number = f"{args.layers:02}"
+    number = f"{args.layer:02}"
     num_workers = args.num_cores
     data_inv = LOAD_gInv_N_g_I(target_pic, number) # Load g^-1 N(g * I)
     ref_data = LOAD_N_I(target_pic, number)        # Load N(I)

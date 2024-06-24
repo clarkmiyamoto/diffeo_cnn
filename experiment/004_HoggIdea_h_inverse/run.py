@@ -146,7 +146,7 @@ if __name__ == "__main__":
     results.sort(key=lambda x: x[0])
 
     # Save results using PyTorch
-    torch.save(results, 'learned_h_inv.pth')
+    torch.save(results, f'hInv_Pic{target_pic}_Layer{number}.pth')
 
 
 

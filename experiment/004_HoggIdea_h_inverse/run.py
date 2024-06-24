@@ -129,11 +129,8 @@ if __name__ == "__main__":
     ### Run Simulation
     diffeo_idxs =  range(int(data_inv.shape[1]))  # Replace num_diffeo_idxs with your actual number
     with mp.Pool(processes=num_workers) as pool:
-        # Use partial to pass fixed arguments data_inv and ref_data to run_simulation
-        partial_run_simulation = partial(run_simulation, layer_idx=layer_idx)
-        
-        # Map the function over diffeo_idxs to get results
-        results = pool.map(partial_run_simulation, diffeo_idxs)
+        func = lambda x: run_simulation(layer_idx=layer_idx, diffeo_idx=x)
+        results = pool.map(func, diffeo_idxs)
 
     # Convert results to a tensor and save
     results = torch.stack(results, dim=0)

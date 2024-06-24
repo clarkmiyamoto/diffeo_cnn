@@ -1,5 +1,8 @@
 import argparse
 
+import multiprocessing as mp
+from functools import partial
+
 import numpy as np
 import torch
 import torch.optim as optim
@@ -93,8 +96,6 @@ def learn_h_inv(feature, label):
     
     return A # This is h_inv
 
-import multiprocessing as mp
-
 def run_simulation(layer_idx, diffeo_idx):
     feature = data_inv[layer_idx, diffeo_idx, :, :, :]
     label = ref_data[layer_idx, :, :, :]
@@ -102,33 +103,6 @@ def run_simulation(layer_idx, diffeo_idx):
     A = learn_h_inv(feature, label)
 
     return diffeo_idx, torch.tensor(A)  # Convert A to a PyTorch tensor
-
-def parallel_run_simulation(layer_idx, diffeo_idxs, target_pic):
-    pool = mp.Pool(mp.cpu_count())  # Create a pool of processes
-
-    results = []
-    for diffeo_idx in diffeo_idxs:
-        results.append(pool.apply_async(run_simulation, args=(layer_idx, diffeo_idx)))
-
-    pool.close()
-    pool.join()
-
-    # Collect results and sort by diffeo_idx
-    sorted_results = sorted((res.get() for res in results), key=lambda x: x[0])
-
-    # Extract A tensors and diffeo_idx
-    diffeo_idxs = [idx for idx, _ in sorted_results]
-    A_tensors = [A for _, A in sorted_results]
-
-    # Convert list of tensors to a single tensor
-    A_tensor = torch.stack(A_tensors, dim=0)
-
-    ### Save A_tensor to file or use as needed
-    torch.save(results, f'hInv_Pic{target_pic}_Layer{layer_idx}.pth')
-
-
-
-
 
 
 if __name__ == "__main__":
@@ -154,4 +128,13 @@ if __name__ == "__main__":
 
     ### Run Simulation
     diffeo_idxs =  range(int(data_inv.shape[1]))  # Replace num_diffeo_idxs with your actual number
-    parallel_run_simulation(layer_idx, diffeo_idxs, target_pic)
+    with mp.Pool(processes=num_workers) as pool:
+        # Use partial to pass fixed arguments data_inv and ref_data to run_simulation
+        partial_run_simulation = partial(run_simulation, layer_idx=layer_idx)
+        
+        # Map the function over diffeo_idxs to get results
+        results = pool.map(partial_run_simulation, diffeo_idxs)
+
+    # Convert results to a tensor and save
+    results = torch.stack(results, dim=0)
+    torch.save(results, f'hInv_Layer{layer_idx}_Picture{target_pic}')

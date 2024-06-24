@@ -133,7 +133,7 @@ if __name__ == "__main__":
     # Using ThreadPoolExecutor for threads or ProcessPoolExecutor for processes
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:
         # Submit tasks for each diffeo_idx
-        futures = [executor.submit(process_diffeo, diffeo_idx) for diffeo_idx in range(0, int(data_inv.shape[1]))]
+        futures = [executor.submit(run_simulation, diffeo_idx) for diffeo_idx in range(0, int(data_inv.shape[1]))]
 
         # Retrieve results as they complete
         results = []

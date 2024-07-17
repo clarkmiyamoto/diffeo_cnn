@@ -1,0 +1,61 @@
+Number of parameters: 369498
+/scratch/cm6627/diffeo_cnn/experiment/006_RandomLabels/./fitting-random-labels/train.py:161: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(input, volatile=True)
+/scratch/cm6627/diffeo_cnn/experiment/006_RandomLabels/./fitting-random-labels/train.py:162: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  target_var = torch.autograd.Variable(target, volatile=True)
+000: Acc-tr:  10.56, Acc-val:   9.68, L-tr: 2.3054, L-val: 2.3059
+001: Acc-tr:  10.30, Acc-val:  10.14, L-tr: 2.3037, L-val: 2.3057
+002: Acc-tr:  10.76, Acc-val:  10.17, L-tr: 2.3028, L-val: 2.3047
+003: Acc-tr:  10.55, Acc-val:   9.72, L-tr: 2.3028, L-val: 2.3058
+004: Acc-tr:  10.82, Acc-val:   9.98, L-tr: 2.3014, L-val: 2.3056
+005: Acc-tr:  11.36, Acc-val:  10.23, L-tr: 2.2993, L-val: 2.3041
+006: Acc-tr:  11.37, Acc-val:   9.73, L-tr: 2.3014, L-val: 2.3063
+007: Acc-tr:  10.60, Acc-val:   9.97, L-tr: 2.2990, L-val: 2.3063
+008: Acc-tr:  12.30, Acc-val:   9.81, L-tr: 2.2958, L-val: 2.3062
+009: Acc-tr:  12.86, Acc-val:   9.97, L-tr: 2.2930, L-val: 2.3070
+010: Acc-tr:  12.65, Acc-val:  10.08, L-tr: 2.2937, L-val: 2.3125
+011: Acc-tr:  12.84, Acc-val:  10.53, L-tr: 2.2940, L-val: 2.3129
+012: Acc-tr:  13.13, Acc-val:   9.62, L-tr: 2.2873, L-val: 2.3168
+013: Acc-tr:  13.01, Acc-val:   9.99, L-tr: 2.2841, L-val: 2.3226
+014: Acc-tr:  14.35, Acc-val:   9.92, L-tr: 2.2750, L-val: 2.3220
+015: Acc-tr:  14.50, Acc-val:  10.17, L-tr: 2.2800, L-val: 2.3313
+016: Acc-tr:  14.93, Acc-val:   9.52, L-tr: 2.2683, L-val: 2.3227
+017: Acc-tr:  17.71, Acc-val:  10.10, L-tr: 2.2387, L-val: 2.3311
+018: Acc-tr:  17.92, Acc-val:   9.63, L-tr: 2.2308, L-val: 2.3424
+019: Acc-tr:  17.67, Acc-val:  10.23, L-tr: 2.2288, L-val: 2.3437
+020: Acc-tr:  18.44, Acc-val:   9.75, L-tr: 2.2062, L-val: 2.3678
+021: Acc-tr:  20.67, Acc-val:   9.95, L-tr: 2.1867, L-val: 2.3593
+022: Acc-tr:  18.05, Acc-val:  10.13, L-tr: 2.2353, L-val: 2.4717
+023: Acc-tr:  25.00, Acc-val:   9.80, L-tr: 2.1028, L-val: 2.4101
+024: Acc-tr:  25.87, Acc-val:   9.82, L-tr: 2.1090, L-val: 2.5194
+025: Acc-tr:  25.03, Acc-val:   9.97, L-tr: 2.0965, L-val: 2.5414
+026: Acc-tr:  28.22, Acc-val:  10.04, L-tr: 2.0364, L-val: 2.4727
+027: Acc-tr:  22.63, Acc-val:  10.22, L-tr: 2.0944, L-val: 2.6579
+028: Acc-tr:  29.51, Acc-val:  10.18, L-tr: 1.9776, L-val: 2.6882
+029: Acc-tr:  31.89, Acc-val:   9.55, L-tr: 1.8875, L-val: 2.6966
+030: Acc-tr:  33.70, Acc-val:   9.83, L-tr: 1.8884, L-val: 2.7867
+031: Acc-tr:  36.96, Acc-val:   9.72, L-tr: 1.7793, L-val: 2.8757
+032: Acc-tr:  34.68, Acc-val:  10.17, L-tr: 1.8349, L-val: 2.9761
+033: Acc-tr:  29.07, Acc-val:  10.17, L-tr: 2.0195, L-val: 3.4415
+034: Acc-tr:  48.03, Acc-val:  10.06, L-tr: 1.5409, L-val: 2.8637
+035: Acc-tr:  35.89, Acc-val:   9.88, L-tr: 1.8337, L-val: 3.3849
+036: Acc-tr:  45.06, Acc-val:  10.09, L-tr: 1.5720, L-val: 3.2304
+037: Acc-tr:  43.49, Acc-val:   9.96, L-tr: 1.6544, L-val: 3.6473
+038: Acc-tr:  48.59, Acc-val:   9.62, L-tr: 1.4771, L-val: 3.1828
+039: Acc-tr:  51.71, Acc-val:   9.38, L-tr: 1.3797, L-val: 3.3729
+040: Acc-tr:  42.79, Acc-val:  10.08, L-tr: 1.6574, L-val: 4.0067
+041: Acc-tr:  53.78, Acc-val:   9.68, L-tr: 1.3416, L-val: 3.7491
+042: Acc-tr:  57.95, Acc-val:  10.34, L-tr: 1.2536, L-val: 3.6077
+043: Acc-tr:  52.94, Acc-val:   9.96, L-tr: 1.3436, L-val: 3.7936
+044: Acc-tr:  45.95, Acc-val:   9.66, L-tr: 1.6265, L-val: 4.2860
+045: Acc-tr:  49.50, Acc-val:  10.43, L-tr: 1.4668, L-val: 4.2615
+046: Acc-tr:  62.86, Acc-val:  10.73, L-tr: 1.1047, L-val: 3.7759
+047: Acc-tr:  64.41, Acc-val:   9.88, L-tr: 1.0419, L-val: 3.8130
+048: Acc-tr:  58.40, Acc-val:  10.19, L-tr: 1.1857, L-val: 4.3433
+049: Acc-tr:  67.73, Acc-val:  10.56, L-tr: 0.9542, L-val: 3.8437
+050: Acc-tr:  67.60, Acc-val:   9.83, L-tr: 0.9495, L-val: 4.0778
+051: Acc-tr:  62.44, Acc-val:  10.02, L-tr: 1.0988, L-val: 4.4960
+052: Acc-tr:  61.61, Acc-val:   9.97, L-tr: 1.0821, L-val: 4.1965
+053: Acc-tr:  57.97, Acc-val:  10.43, L-tr: 1.2806, L-val: 4.9150
+054: Acc-tr:  62.98, Acc-val:   9.76, L-tr: 1.0677, L-val: 4.2972
+055: Acc-tr:  69.83, Acc-val:   9.61, L-tr: 0.9226, L-val: 4.7945

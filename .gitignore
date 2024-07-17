@@ -1,6 +1,13 @@
 # Specific
 data/
+penv/
 *.s
+*.SBATCH
+*.sbatch
+*.ext3
+*.sh
+*.tar.gz
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

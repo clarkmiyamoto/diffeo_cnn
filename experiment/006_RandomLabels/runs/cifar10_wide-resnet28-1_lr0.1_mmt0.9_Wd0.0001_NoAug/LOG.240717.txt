@@ -1,0 +1,5 @@
+INFO:root:Number of parameters: 369498
+INFO:root:000: Acc-tr:  60.55, Acc-val:  59.68, L-tr: 1.1093, L-val: 1.1496
+INFO:root:001: Acc-tr:  72.25, Acc-val:  69.68, L-tr: 0.7789, L-val: 0.8443
+INFO:root:002: Acc-tr:  76.53, Acc-val:  73.09, L-tr: 0.6683, L-val: 0.7726
+INFO:root:003: Acc-tr:  78.03, Acc-val:  74.17, L-tr: 0.6329, L-val: 0.7708

@@ -43,7 +43,7 @@ def get_activation(model, layer_num: int, features: 'torch.tensor'):
 def get_all_activations(model, features: 'torch.tensor') -> 'torch.tensor':
     layer_ids = range(len(model.blocks))
     activations = [get_activation(model, layer_num=layer_num, features=features) for layer_num in layer_ids]
-    return torch.stack(activations)
+    return torch.stack(activations) # shape (num of layers, diffeos, activation_length, activation_height)
 
 
 def load_dataset():
@@ -92,7 +92,7 @@ def main():
     print(diffeoed_image.shape) 
     results = get_all_activations(model, features=diffeoed_image)
 
-    torch.save(results, 'ViT_Activations_Over_Diffeos.pt')
+    torch.save(results, 'ViT_Activations_Over_Diffeos.pt') # shape (num of hidden layers, diffeos, activation_length, activation_height)
         
 
 

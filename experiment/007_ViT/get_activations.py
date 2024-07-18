@@ -33,7 +33,7 @@ def get_activation(model, layer_num: int, features: 'torch.tensor'):
 
     # Run Model-- data goes to hook
     with torch.no_grad():
-        output = model(images)
+        output = model(features)
         del output
 
     # Return output of hidden layer

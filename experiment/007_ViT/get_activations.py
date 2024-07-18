@@ -7,6 +7,9 @@ from PIL import Image
 import numpy as np
 from tqdm import tqdm
 
+from .diffeo_equivariance.utils.diffeo_container import diffeo_container, sparse_diffeo_container
+
+
 def load_model():
     model = timm.create_model('vit_base_patch16_224', pretrained=True)
     model.eval()

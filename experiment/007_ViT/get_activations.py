@@ -18,6 +18,7 @@ device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cp
 
 def load_model():
     model = timm.create_model('vit_base_patch16_224', pretrained=True)
+    model = model.to(device)
     model.eval()
 
     print('Loaded model!')

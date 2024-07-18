@@ -1,9 +1,0 @@
-Number of parameters: 369498
-/scratch/cm6627/diffeo_cnn/experiment/006_RandomLabels/./fitting-random-labels/train.py:161: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
-  input_var = torch.autograd.Variable(input, volatile=True)
-/scratch/cm6627/diffeo_cnn/experiment/006_RandomLabels/./fitting-random-labels/train.py:162: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
-  target_var = torch.autograd.Variable(target, volatile=True)
-000: Acc-tr:  60.55, Acc-val:  59.68, L-tr: 1.1093, L-val: 1.1496
-001: Acc-tr:  72.25, Acc-val:  69.68, L-tr: 0.7789, L-val: 0.8443
-002: Acc-tr:  76.53, Acc-val:  73.09, L-tr: 0.6683, L-val: 0.7726
-003: Acc-tr:  78.03, Acc-val:  74.17, L-tr: 0.6329, L-val: 0.7708

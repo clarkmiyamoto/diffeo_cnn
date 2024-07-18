@@ -86,7 +86,7 @@ def main():
 
     model = load_model()
     dataset = load_dataset()
-    diffeos = load_diffeos(dataset, )
+    diffeos = diffeo_images(dataset)
 
     transformed_images = diffeo_images(images=features, diffeos=diffeos)
     print(transformed_images.shape)

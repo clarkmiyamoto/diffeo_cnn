@@ -1,5 +1,6 @@
 import timm
 import torch
+import torchvision
 from torchvision import transforms
 
 from PIL import Image
@@ -7,7 +8,10 @@ from PIL import Image
 import numpy as np
 from tqdm import tqdm
 
-from .diffeo_equivariance.utils.diffeo_container import diffeo_container, sparse_diffeo_container
+import sys
+sys.path.insert(0, '/scratch/cm6627/diffeo_cnn/experiment/007_ViT/diffeo_equivariance')
+
+from utils.diffeo_container import diffeo_container, sparse_diffeo_container
 
 
 def load_model():

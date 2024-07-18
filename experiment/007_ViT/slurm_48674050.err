@@ -1,0 +1,8 @@
+WARNING: Could not find any nv files on this host!
+Traceback (most recent call last):
+  File "/scratch/cm6627/diffeo_cnn/experiment/007_ViT/./get_activations.py", line 101, in <module>
+    main()
+  File "/scratch/cm6627/diffeo_cnn/experiment/007_ViT/./get_activations.py", line 87, in main
+    diffeos = load_diffeos(dataset, )
+              ^^^^^^^^^^^^
+NameError: name 'load_diffeos' is not defined

@@ -86,11 +86,9 @@ def main():
 
     model = load_model()
     dataset = load_dataset()
-    diffeos = diffeo_images(dataset)
-
-    transformed_images = diffeo_images(images=features, diffeos=diffeos)
-    print(transformed_images.shape)
-    results = [get_all_activations(model, features=image) for image in tqdm(transformed_images)]
+    diffeoed_image = diffeo_images(dataset)
+    print(diffeoed_image.shape)
+    results = [get_all_activations(model, features=image) for image in tqdm(diffeoed_image)]
 
     torch.save(results, 'ViT_Activations_Over_Diffeos.pt')
         

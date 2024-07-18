@@ -66,7 +66,7 @@ def diffeo_images(dataset: 'torchvision.dataset') -> 'torch.tensor':
     image_id = 0
 
     feature, _ = dataset[image_id]
-    feature.to(device)
+    feature = feature.to(device)
     feature = feature.unsqueeze(0).expand(number_of_diffeo, -1, -1, -1)
 
     sparse_diffeos = sparse_diffeo_container(pixels, pixels)

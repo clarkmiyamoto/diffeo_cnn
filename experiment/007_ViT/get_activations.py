@@ -13,6 +13,8 @@ sys.path.insert(0, '/scratch/cm6627/diffeo_cnn/experiment/007_ViT/diffeo_equivar
 
 from utils.diffeo_container import diffeo_container, sparse_diffeo_container
 
+device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+
 
 def load_model():
     model = timm.create_model('vit_base_patch16_224', pretrained=True)

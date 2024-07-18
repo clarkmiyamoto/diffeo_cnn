@@ -66,7 +66,7 @@ def diffeo_images(dataset: 'torchvision.dataset') -> 'torch.tensor':
     number_of_diffeo = 20
     image_id = 0
 
-    feature, _ = dataset[image_id]
+    feature, _ = dataset[image_id] # HERE I SELECT THE IMAGE
     feature = feature.to(device)
     feature = feature.unsqueeze(0).expand(number_of_diffeo, -1, -1, -1)
 

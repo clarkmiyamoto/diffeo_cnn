@@ -67,7 +67,7 @@ def diffeo_images(dataset: 'torchvision.dataset') -> 'torch.tensor':
     image_id = 0
 
     feature, _ = dataset[image_id]
-    feature = feature.to(device)
+    feature = feature.to('cpu')
     feature = feature.unsqueeze(0).expand(number_of_diffeo, -1, -1, -1)
 
     sparse_diffeos = sparse_diffeo_container(pixels, pixels)
@@ -76,7 +76,7 @@ def diffeo_images(dataset: 'torchvision.dataset') -> 'torch.tensor':
     for strength in diffeo_strength_list:
         sparse_diffeos.sparse_AB_append(4, 4, 3, strength, number_of_diffeo)
     sparse_diffeos.get_all_grid()
-    sparse_diffeos.to(device)
+    sparse_diffeos.to('cpu')
 
     return torch.stack(sparse_diffeos(feature)).reshape(num_strength * number_of_diffeo, 3, pixels, pixels)
 
@@ -90,7 +90,8 @@ def main():
     dataset = load_dataset()
     diffeoed_image = diffeo_images(dataset) # list (len num of strength) of tensor.shape(20,3,224,224)
     print(diffeoed_image.shape) 
-    results = get_all_activations(model, features=diffeoed_image)
+
+    results = get_all_activations(model, features=diffeoed_image.to(device))
 
     torch.save(results, 'ViT_Activations_Over_Diffeos.pt') # shape (num of hidden layers, diffeos, activation_length, activation_height)
         

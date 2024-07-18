@@ -89,7 +89,7 @@ def main():
     dataset = load_dataset()
     diffeoed_image = diffeo_images(dataset) # list (len num of strength) of tensor.shape(20,3,224,224)
     print(diffeoed_image.shape) 
-    results = [get_all_activations(model, features=image) for image in tqdm(diffeoed_image)]
+    results = get_all_activations(model, features=diffeoed_image)
 
     torch.save(results, 'ViT_Activations_Over_Diffeos.pt')
         

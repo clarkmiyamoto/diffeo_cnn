@@ -1,7 +1,7 @@
 def IMAGENET1KRandomLabels(root, 
                            train: bool,
                            transform,
-                           corrupt_prob=args.label_corrupt_prob):
+                           corrupt_prob):
     if train:
         split = 'train'
     else:

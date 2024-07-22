@@ -216,7 +216,11 @@ class AverageMeter(object):
 
 def adjust_learning_rate(optimizer, epoch, args):
   """Sets the learning rate to the initial LR decayed by 10 after 150 and 225 epochs"""
-  lr = args.learning_rate * (0.1 ** (epoch // 150)) * (0.1 ** (epoch // 225))
+  lr = (args.learning_rate * (0.1 ** (epoch // 50)) 
+                           * (0.1 ** (epoch // 100))  
+                           * (0.1 ** (epoch // 150))
+                           * (0.1 ** (epoch // 200))
+                           * (0.1 ** (epoch // 250)))
   for param_group in optimizer.param_groups:
       param_group['lr'] = lr
 
@@ -249,7 +253,6 @@ def setup_logging(args):
   console.setLevel(logging.INFO)
   logging.getLogger('').addHandler(console)
   print('Logging into %s...' % exp_dir)
-
 
 def main():
   args = cmd_args.parse_args()

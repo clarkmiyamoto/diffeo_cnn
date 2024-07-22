@@ -1,3 +1,6 @@
+import torchvision
+import numpy as np
+
 def IMAGENET1KRandomLabels(root, 
                            train: bool,
                            transform,
@@ -7,7 +10,7 @@ def IMAGENET1KRandomLabels(root,
     else:
         split = 'val'
     
-    dataset = torchvision.datasets.ImageNet(path, 
+    dataset = torchvision.datasets.ImageNet(root, 
                                             split='val', 
                                             transform=transform)
     

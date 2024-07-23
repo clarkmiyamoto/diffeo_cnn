@@ -5,9 +5,9 @@ import model_wideresnet
 
 class ModelWeights:
     
-    self.path = '/scratch/cm6627/diffeo_cnn/experiment/006_RandomLabels/ModelWeights/'
-    self.EpochsAmount = [0, 60, 120, 180, 240]
-    self.CorruptAmount = [0.0, 0.5, 1.0]
+    path = '/scratch/cm6627/diffeo_cnn/experiment/006_RandomLabels/ModelWeights/'
+    EpochsAmount = [0, 60, 120, 180, 240]
+    CorruptAmount = [0.0, 0.5, 1.0]
 
     @staticmethod
     def load_Model(corrupt: float, epochs: int) -> 'torch.model':
@@ -38,7 +38,7 @@ class ModelWeights:
 
         if epochs == 0:  # This is just a randomly initalized model 
             corrupt = '0p0'
-            
+
         file_name = f'/Corrupt-{corrupt}/ModelWeights_{epochs}Epochs.pth'
 
         # I trained on these parameters, which are default to the paper's code

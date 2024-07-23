@@ -12,15 +12,18 @@ class ModelWeights:
     @staticmethod
     def load_Model(corrupt: float, epochs: int) -> 'torch.model':
         """
-        Loads model w/ weights trained w/ various amounts 
+        Loads WideResNet w/ weights trained w/ various amounts 
         of corruption and at different epochs.
+
+        Args:
+        - corrupt (float): Percentage (in decimal form) of labels randomized
+        - epochs (int): Number of epochs during training
         
-        Example usage
-
-        model = ModelWeights.load_Model(corrupt = 0.5, epochs)
+        Example usage:
+        ```
+        model = ModelWeights.load_Model(corrupt=0.5, epochs=180)
+        ```
         """
-
-
         ### Checks
         if corrupt not in ModelWeights.CorruptAmount:
             raise ValueError(f'`corrupt` must be: {ModelWeights.CorruptAmount}')

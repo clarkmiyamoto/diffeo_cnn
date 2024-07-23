@@ -1,0 +1,15 @@
+/ext3/miniconda3/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/ext3/miniconda3/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Number of parameters: 5288548
+/scratch/cm6627/diffeo_cnn/experiment/008_RandomLabels_EfficentNetb0/./train.py:184: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  input_var = torch.autograd.Variable(input, volatile=True)
+/scratch/cm6627/diffeo_cnn/experiment/008_RandomLabels_EfficentNetb0/./train.py:185: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  target_var = torch.autograd.Variable(target, volatile=True)
+000: Acc-tr:   0.09, Acc-val:   0.09, L-tr: 7.6440, L-val: 7.6440
+001: Acc-tr:   0.15, Acc-val:   0.15, L-tr: 6.9069, L-val: 6.9069
+002: Acc-tr:   0.18, Acc-val:   0.18, L-tr: 6.9052, L-val: 6.9052
+003: Acc-tr:   0.16, Acc-val:   0.16, L-tr: 6.9044, L-val: 6.9044
+004: Acc-tr:   0.20, Acc-val:   0.20, L-tr: 6.9037, L-val: 6.9037
+005: Acc-tr:   0.23, Acc-val:   0.23, L-tr: 6.8927, L-val: 6.8927

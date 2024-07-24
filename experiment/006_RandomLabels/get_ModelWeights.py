@@ -1,6 +1,7 @@
 import sys
 sys.path.append('/scratch/cm6627/diffeo_cnn/experiment/006_RandomLabels/fitting-random-labels')
 
+import torch
 import model_wideresnet 
 
 class ModelWeights:

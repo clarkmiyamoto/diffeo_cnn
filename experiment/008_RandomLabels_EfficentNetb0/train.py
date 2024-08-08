@@ -61,7 +61,7 @@ def get_data_loaders(args, shuffle_train=True):
         transforms.ToTensor()
     ])
 
-    kwargs = {'num_workers': 1, 'pin_memory': True}
+    kwargs = {'num_workers': 8, 'pin_memory': True}
     train_loader = torch.utils.data.DataLoader(
         IMAGENET1KRandomLabels(root=root, train=True, transform=transform,
                                corrupt_prob=args.label_corrupt_prob),
@@ -106,9 +106,14 @@ def train_model(args, model, train_loader, val_loader,
 
   # define loss function (criterion) and pptimizer
   criterion = nn.CrossEntropyLoss().cuda()
-  optimizer = torch.optim.SGD(model.parameters(), args.learning_rate,
-                              momentum=args.momentum,
-                              weight_decay=args.weight_decay)
+  
+  if args.optimizer == 'sgd':
+    optimizer = torch.optim.SGD(model.parameters(), args.learning_rate,
+                                momentum=args.momentum,
+                                weight_decay=args.weight_decay) 
+  elif args.optimizer == 'adam':
+    optimizer = torch.optim.Adam(model.parameters(), args.learning_rate)
+  
 
   start_epoch = start_epoch or 0
   epochs = epochs or args.epochs

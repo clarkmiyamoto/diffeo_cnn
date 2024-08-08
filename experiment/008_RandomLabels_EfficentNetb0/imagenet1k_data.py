@@ -11,7 +11,7 @@ def IMAGENET1KRandomLabels(root,
         split = 'val'
     
     dataset = torchvision.datasets.ImageNet(root, 
-                                            split=split, 
+                                            split='val', 
                                             transform=transform)
     
     if corrupt_prob > 0:

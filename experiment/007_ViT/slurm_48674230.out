@@ -1,0 +1,2 @@
+Loaded model!
+torch.Size([300, 3, 224, 224])

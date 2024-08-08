@@ -10,6 +10,7 @@ penv/
 *.txt
 *.err
 *.out
+Miniconda3-latest-Linux-x86_64.sh
 
 
 # Byte-compiled / optimized / DLL files

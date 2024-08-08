@@ -7,7 +7,7 @@ CORRUPT=(0. 21 24 28)
 for corruption_percentage in "${CORRUPT[@]}"; do
     
     # Create a unique job name based on the parameters
-    JOB_NAME="train_bs${batch_size}_dr${drop_rate}_depth${depth}"
+    JOB_NAME="train_corrupt${corruption_percentage}"
     OUTPUT_FILE="slurm_${JOB_NAME}_%j.out"
     ERROR_FILE="slurm_${JOB_NAME}_%j.err"
     

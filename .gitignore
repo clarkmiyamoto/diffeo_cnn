@@ -5,8 +5,11 @@ penv/
 *.SBATCH
 *.sbatch
 *.ext3
-*.sh
 *.tar.gz
+*.pth
+*.txt
+*.err
+*.out
 
 
 # Byte-compiled / optimized / DLL files

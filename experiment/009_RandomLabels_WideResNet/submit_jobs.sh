@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the arrays
-CORRUPT=(0. 21 24 28)
+CORRUPT=(0.0 0.2 0.4 0.6 0.8 1.0)
 
 # Loop through each combination of parameters
 for corruption_percentage in "${CORRUPT[@]}"; do
